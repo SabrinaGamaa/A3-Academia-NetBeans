@@ -163,7 +163,7 @@ git clone https://github.com/SabrinaGamaa/A3-Academia-NetBeans.git
 
 ## 👩‍💻 Autoria
 
-> Projeto desenvolvido por **Sabrina Gama**, [**Vicenzzo Palma**](https://github.com/vicenzzopalma), **Raquel**, **Kauan** e **Paulo Henrique Oliveira de Carvalho**, como parte da disciplina **A3 - Programação** no curso de **Análise e Desenvolvimento de Sistemas**.
+> Projeto desenvolvido por [**Sabrina Gama**](https://github.com/SabrinaGamaa), [**Vicenzzo Palma**](https://github.com/vicenzzopalma), **Raquel**, **Kauan** e **Paulo Henrique Oliveira de Carvalho**, como parte da disciplina **A3 - Programação** no curso de **Análise e Desenvolvimento de Sistemas**.
 
 ---
 
