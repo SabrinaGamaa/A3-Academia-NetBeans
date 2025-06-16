@@ -1,6 +1,6 @@
 # 💪 Sistema de Gerenciamento de Academia - A3 (Java + SQLite)
 
-Este projeto foi desenvolvido como parte da **Avaliação A3** da disciplina de Programação, no **primeiro semestre da faculdade de Análise e Desenvolvimento de Sistemas**, com o objetivo de criar um sistema completo de gerenciamento de alunos e seus treinos em uma academia.
+Este projeto foi desenvolvido como parte da **Avaliação A3** da disciplina de Programação, com o objetivo de criar um sistema completo de gerenciamento de alunos e seus treinos em uma academia.
 
 > ⚠️ Trabalho em grupo com 5 integrantes.
 
@@ -50,9 +50,9 @@ Desenvolver um sistema com as funcionalidades de **cadastro, visualização, edi
 
 ## 🛠 Tecnologias Utilizadas
 
-- **Java JDK 22**
+- **Java JDK 21**
 - **NetBeans 20** (GUI via Swing Designer)
-- **SQLite** (banco de dados local)
+- **SQLite JDBC 3.43.2.2** (banco de dados local)
 - **JDBC** (Java Database Connectivity)
 - **Maven** (gerenciador de dependências)
 - **Git & GitHub** (versionamento)
@@ -74,7 +74,7 @@ A3AcademiaNetBeans/
 │       │   └── util/            # Utilitários e renderizadores
 │       └── resources/
 │           └── imagens/         # Ícones usados no GUI
-├── pom.xml                     # Configuração do Maven (dependências)
+├── pom.xml                      # Configuração do Maven (dependências)
 └── README.md
 ```
 
@@ -85,13 +85,33 @@ A3AcademiaNetBeans/
 O arquivo `pom.xml` contém a configuração do projeto Maven, incluindo:
 
 ```xml
-<dependencies>
-    <dependency>
-        <groupId>org.xerial</groupId>
-        <artifactId>sqlite-jdbc</artifactId>
-        <version>3.36.0.3</version>
-    </dependency>
-</dependencies>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>java</groupId>
+    <artifactId>A3Academia</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+        <exec.mainClass>Programa</exec.mainClass>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.43.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE250</version>
+        </dependency>
+    </dependencies>
+    <name>A3AcademiaNetBeans</name>
+</project>
 ```
 
 - A dependência acima permite que o sistema se conecte ao banco de dados SQLite com suporte completo.
@@ -123,17 +143,6 @@ Separação em `modelo`, `repositório`, `serviços` e `telas` deixou o sistema 
 ### 🚫 Tratamento de Erros
 Todas as entradas do usuário e exceções críticas estão tratadas com `JOptionPane`, fornecendo mensagens amigáveis. Não há risco de erros em tempo de execução sem aviso ao usuário.
 
----
-
-## 🎯 Melhorias Futuras
-
-- [x] Interface mais profissional nas tabelas
-- [x] Responsividade parcial da GUI
-- [x] Centralização e padding em colunas
-- [x] ConfirmDialog para exclusão
-- [ ] Autenticação de acesso (login/admin)
-- [ ] Exportação de dados para CSV
-- [ ] Relatórios em PDF
 
 ---
 
@@ -154,7 +163,7 @@ git clone https://github.com/SabrinaGamaa/A3-Academia-NetBeans.git
 
 ## 🔧 Pré-requisitos
 
-- Java JDK 22 instalado
+- Java JDK 21 instalado
 - NetBeans 20
 - Maven configurado (já incluso no NetBeans)
 - Git (opcional)
@@ -163,7 +172,14 @@ git clone https://github.com/SabrinaGamaa/A3-Academia-NetBeans.git
 
 ## 👩‍💻 Autoria
 
-> Projeto desenvolvido por [**Sabrina Gama**](https://github.com/SabrinaGamaa), [**Vicenzzo Palma**](https://github.com/vicenzzopalma), **Raquel**, **Kauan** e **Paulo Henrique Oliveira de Carvalho**, como parte da disciplina **A3 - Programação** no curso de **Análise e Desenvolvimento de Sistemas**.
+Projeto desenvolvido por 
+ - [**Sabrina Gama**](https://github.com/SabrinaGamaa)
+ - [**Vicenzzo Palma**](https://github.com/vicenzzopalma)
+ - [**Raquel Silva**](https://github.com/RaquelSillva)
+ - [**Paulo H. Oliveira**](https://github.com/PauloHOC818)
+ - **Kauan**
+
+> como parte da disciplina A3 - 1º semestre de Programação de Soluções Computacionais.
 
 ---
 
